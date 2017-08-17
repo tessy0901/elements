@@ -1,4 +1,7 @@
 sceneSetups:
-- path: Assets/Scene/Demo/Demo1/UseUI.unity
+- path: Assets/Scene/Demo/Demo3/AddScenes.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scene/Demo/Demo3/TransitionScenes2.unity
+  isLoaded: 1
+  isActive: 0
