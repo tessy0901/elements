@@ -8,22 +8,42 @@ public class Star : MonoBehaviour
 {
     public int inputValue = 0;
     private int count = 0;
+    Image image;
 
+    void Start()
+    {
+        image = GetComponent<Image>();
+    }
+   
     public void Push(Text uiText)
     {
-        int num = int.Parse(uiText.text);
-        uiText.text = (num + inputValue).ToString();
+        if (image.enabled == true)
+        {
+            int num = int.Parse(uiText.text);
+            uiText.text = (num + inputValue).ToString();
+        }
     }
 
     public void OnMouseDown()
     {
-        gameObject.SetActive(false);
-        if (count >= 10)
+        image.enabled = false;
+    }
+
+    void Update()
+    {
+        if (image.enabled == false)
         {
-            count = 0;
-            gameObject.SetActive(true);
+            if (count >= 60)
+            {
+                count = 0;
+                CountUp();
+            }
+            count++;
         }
-        count ++;
+    }
+
+    void CountUp()
+    {
+        image.enabled = true;
     }
 }
-
