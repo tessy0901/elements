@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,9 @@ using UnityEngine.UI;
 public class Star : MonoBehaviour
 {
     public int inputValue = 0;
-    private int count = 0;
+    private int count;
+    private int start;
+    private int now;
     Image image;
 
     void Start()
@@ -27,18 +30,19 @@ public class Star : MonoBehaviour
     public void OnMouseDown()
     {
         image.enabled = false;
+        start = DateTime.Now.Second;
     }
 
     void Update()
     {
         if (image.enabled == false)
         {
-            if (count >= 60)
+            now = DateTime.Now.Second;
+            count = now - start;
+            if (count >= 10)
             {
-                count = 0;
                 CountUp();
             }
-            count++;
         }
     }
 
