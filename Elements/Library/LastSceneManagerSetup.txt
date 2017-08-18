@@ -1,9 +1,13 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scene/Demo/Demo3/AddScenes.unity
 =======
 - path: Assets/Scene/Collect.unity
 >>>>>>> origin/master
+=======
+- path: Assets/Scene/home.unity
+>>>>>>> eve
   isLoaded: 1
   isActive: 1
 - path: Assets/Scene/Demo/Demo3/TransitionScenes2.unity
