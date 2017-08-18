@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Canvas : MonoBehaviour {
 		
 	void Start(){
-		Debug.Log(GetComponent<Canvas>().worldCamera);
+		// Debug.Log(GetComponent<Canvas>().worldCamera);
 		// GetComponent<Canvas>().RenderCamera;
 	}
 }
